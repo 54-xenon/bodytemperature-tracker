@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: "体温記録アプリ",
       theme: ThemeData(),
+      home: ,
     );
   }
 }
