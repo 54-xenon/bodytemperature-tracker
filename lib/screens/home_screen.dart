@@ -1,3 +1,4 @@
+import 'package:bodytemperatracker/screens/data_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -20,7 +21,7 @@ class HomeScreen extends StatelessWidget {
           IconButton(
             icon: Icon(Icons.history),
             onPressed: () {
-              
+              Navigator.push(context, MaterialPageRoute(builder: (context) => DataScreen()));
             },
           ),
           IconButton(
