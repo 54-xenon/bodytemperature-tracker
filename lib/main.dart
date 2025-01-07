@@ -1,3 +1,4 @@
+import 'package:bodytemperatracker/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: "体温記録アプリ",
       theme: ThemeData(),
-      home: ,
+      home: HomeScreen(),
     );
   }
 }
