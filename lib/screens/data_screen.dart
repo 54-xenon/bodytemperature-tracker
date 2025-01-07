@@ -5,6 +5,19 @@ class DataScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('履歴',
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        backgroundColor: Colors.lightGreen,
+        elevation: 2,
+      ),
+      body: Container(
+        child: ListView(),
+      ),
+    );
   }
 }

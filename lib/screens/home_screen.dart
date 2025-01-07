@@ -2,9 +2,14 @@ import 'package:bodytemperatracker/screens/data_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,6 +26,7 @@ class HomeScreen extends StatelessWidget {
           IconButton(
             icon: Icon(Icons.history),
             onPressed: () {
+              // 履歴のページへと飛ぶ
               Navigator.push(context, MaterialPageRoute(builder: (context) => DataScreen()));
             },
           ),
@@ -57,7 +63,6 @@ class HomeScreen extends StatelessWidget {
               TextField(
                 // 数字だけ入力できるようにTextFiledを制限
                 keyboardType: TextInputType.number,
-                inputFormatters: [FilteringTextInputFormatter.digitsOnly],  
                 decoration: InputDecoration(
                   enabledBorder: OutlineInputBorder(
                     borderSide: BorderSide(
